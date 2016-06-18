@@ -167,7 +167,7 @@ day.
 
 ```r
 weekend = c("Saturday", "Sunday")
-dataImputed$dayType <- weekdays(as.Date(dataImputed$date))
+dataImputed$dayType <- weekdays(dataImputed$date)
 dataImputed$dayType[dataImputed$dayType %in% weekend ] <- "weekend"
 dataImputed$dayType[dataImputed$dayType != "weekend"] <- "weekday"
 dataImputed$dayType <- factor(dataImputed$dayType)

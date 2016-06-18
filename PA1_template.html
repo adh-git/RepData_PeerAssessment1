@@ -209,7 +209,7 @@ results</code></pre>
 <h2>Are there differences in activity patterns between weekdays and weekends?</h2>
 <p>Create a new factor variable in the dataset with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.</p>
 <pre class="r"><code>weekend = c(&quot;Saturday&quot;, &quot;Sunday&quot;)
-dataImputed$dayType &lt;- weekdays(as.Date(dataImputed$date))
+dataImputed$dayType &lt;- weekdays(dataImputed$date)
 dataImputed$dayType[dataImputed$dayType %in% weekend ] &lt;- &quot;weekend&quot;
 dataImputed$dayType[dataImputed$dayType != &quot;weekend&quot;] &lt;- &quot;weekday&quot;
 dataImputed$dayType &lt;- factor(dataImputed$dayType)</code></pre>
